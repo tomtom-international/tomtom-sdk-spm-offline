@@ -44,7 +44,7 @@ The TomTomSDKOfflineFrameworks package provides iOS modules to build "offline" n
 1. Ensure you finished the [Getting access](#getting-access) steps.
 2. Add next line to your package dependencies in the `Package.swift` file:
     ```swift
-    .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-offline", exact: "0.48.0")
+    .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-offline", exact: "0.49.0")
     ```
     > We recommend using the `exact` version to have a consistent resolution.
 3. Add next required module to your target dependencies in the `Package.swift` file, e.g.:
@@ -60,7 +60,7 @@ The TomTomSDKOfflineFrameworks package provides iOS modules to build "offline" n
             .library(name: "MyLibrary", targets: ["MyLibrary"]),
         ],
         dependencies: [
-            .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-offline", exact: "0.48.0")
+            .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-offline", exact: "0.49.0")
         ],
         targets: [
            .target(name: "MyLibrary", dependencies: [
