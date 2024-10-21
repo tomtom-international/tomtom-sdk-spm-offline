@@ -11,12 +11,12 @@
 
 import PackageDescription
 
-let sdkVersion = "0.64.0"
+let sdkVersion = "0.47.6"
 
 let package = Package(
     name: "TomTomSDKOfflineFrameworks",
     defaultLocalization: "en",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v13)],
     products: [ /* products are set later */ ],
     dependencies: [
         .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-core", exact: Version(stringLiteral: sdkVersion)),
@@ -27,7 +27,7 @@ let package = Package(
 )
 
 let modules: [Module] = [
-    Module("TomTomSDKDataManagementOffline", sha: "17b09a70b158eeab240ed4f4e7f0fdf7a9906b394db6210642029b27e8cf6618", version: "0.64.0", dependencies: [
+    Module("TomTomSDKDataManagementOffline", sha: "5e382d16746d0fc6358160d015586a32f3105e54e1e7fa14735bc2c733d19c1e", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSStoreAccessInternal"),
         .offlinePackageModule("TomTomSDKBindingOnboardDirectionsInternal"),
         .offlinePackageModule("TomTomSDKBindingOnboardOpenLRInternal"),
@@ -38,7 +38,7 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKBindingNavigationTilingInternal"),
     ]),
 
-    Module("TomTomSDKNDSStoreUpdater", sha: "ab6bcfaa35dc122cb5d9660c9dd44fd614737cc08ed6fbb7f633e5fb8c43c4a4", version: "0.64.0", dependencies: [
+    Module("TomTomSDKNDSStoreUpdater", sha: "041abbab58ad44384fc1a04a5bececa391c61bccdc8580d20b3b58853de9b065", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingOnboardMapUpdateInternal"),
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         // core package dependencies
@@ -48,14 +48,14 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKDataManagement"),
     ]),
 
-    Module("TomTomSDKNavigationDataStoreHybrid", sha: "006e94deda6223d83a422fb2c2b1682cb30a770c4646211ed6ddfb420f7846fa", version: "0.64.0", dependencies: [
+    Module("TomTomSDKNavigationDataStoreHybrid", sha: "9f78a21a3d4454cb84667892589faef7534ad4a2cd89485e359adcd8d5a74df7", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         // navigation package dependencies
         .navigationPackageModule("TomTomSDKDataManagement"),
         .navigationPackageModule("TomTomSDKNavigationTileStore"),
     ]),
 
-    Module("TomTomSDKDataSourceSelectionEngine", sha: "6be86196d51a82b7ab695927604b938a09a7e022e33199ed23b01154d9c46ca3", version: "0.64.0", dependencies: [
+    Module("TomTomSDKDataSourceSelectionEngine", sha: "85b1115beea014d78f69204dbcaffb654ff769358da6bd425d0a416652e97d39", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKNavigationDataStoreHybrid"),
         // core package dependencies
         .corePackageModule("TomTomSDKCommon"),
@@ -64,7 +64,7 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKNavigationEngines"),
     ]),
 
-    Module("TomTomSDKMapDisplayDataProviderOffline", sha: "eddccaab5437187fd741a2d0511eb843a5bf5f8e4c7525c3382238b8925bed58", version: "0.64.0", dependencies: [
+    Module("TomTomSDKMapDisplayDataProviderOffline", sha: "db111efde35e9bee467556ae175f7e349a1aa03d0cfd55e557382b2675651a22", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingMapDisplayOnboardDataProviderInternal"),
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         // core package dependencies
@@ -74,7 +74,7 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKDataManagement"),
     ]),
 
-    Module("TomTomSDKMapDisplayDataProviderHybrid", sha: "f7dd9d0c981fa7dc9eacc05ccd4c3f28cf29397354c5fdad4553ef032df57802", version: "0.64.0", dependencies: [
+    Module("TomTomSDKMapDisplayDataProviderHybrid", sha: "463e1b735416692564fd2fb68f2846587a216eb2a74443415acb306128a81b02", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         .offlinePackageModule("TomTomSDKMapDisplayDataProviderOffline"),
         // core package dependencies
@@ -85,7 +85,7 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKDataManagement"),
     ]),
 
-    Module("TomTomSDKReverseGeocoderOffline", sha: "3a274bcf6fc597c0179fd003f24a2f36bb67c12cf28418cf647560e8ddcdd0bc", version: "0.64.0", dependencies: [
+    Module("TomTomSDKReverseGeocoderOffline", sha: "082ae362f00e8fbb7e36d29eec8ce8a5e70dd0dfd96c95c6d134336812f51b5a", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingOnboardReverseGeocoderInternal"),
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         // core package dependencies
@@ -94,12 +94,12 @@ let modules: [Module] = [
         // navigation package dependency
         .navigationPackageModule("TomTomSDKDataManagement"),
     ]),
-    Module("TomTomSDKBindingOnboardReverseGeocoderInternal", sha: "f4ce62cd1b45c1655426d5f420c6e4d2c37527f9df530f8a305c9f402e5be40f", version: "0.64.0", dependencies: [
+    Module("TomTomSDKBindingOnboardReverseGeocoderInternal", sha: "e4d9c95bc8fd9ed90dcadbe7314dc784b3b4a9468614ccf1a2844d6d1c90a190", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSStoreAccessInternal"),
         .offlinePackageModule("TomTomSDKBindingNDSSQLiteInternal"),
     ]),
 
-    Module("TomTomSDKRoutePlannerOffline", sha: "30caafe11086701b8294c903cf355cc74803db27b6af7febf7bc8f76b6debebd", version: "0.64.0", dependencies: [
+    Module("TomTomSDKRoutePlannerOffline", sha: "04cffaa847cd0530aaaf5fbdb40c3ea15e638763ef17aece10f40ac8eb0916b3", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingOnboardDirectionsInternal"),
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         .offlinePackageModule("TomTomSDKTrafficEngine"),
@@ -114,7 +114,7 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKDataManagement"),
     ]),
 
-    Module("TomTomSDKRangeCalculatorOffline", sha: "fc8471b37bb9b3bad84dc8ee43d925a0278543b1d804e4e61c36a8c1310cb0f6", version: "0.64.0", dependencies: [
+    Module("TomTomSDKRangeCalculatorOffline", sha: "049823d8cd86543a55037b6f0adc57fc6113b7f4ecc694f6c50a8eabb6b0ff46", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingOnboardDirectionsInternal"),
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         .offlinePackageModule("TomTomSDKTrafficEngine"),
@@ -128,7 +128,12 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKDataManagement"),
     ]),
 
-    Module("TomTomSDKSearchOffline", sha: "9d493a0996ca2e46eecab1f8ed8ae9170b07c9bedb727787dde346f4009b2f08", version: "0.64.0", dependencies: [
+    Module("TomTomSDKPersonalDataOffline", sha: "9cc69af112de14620efa33a77f102457b7ebb27230923a818dfeefc5f03a0553", version: "0.47.6", dependencies: [
+        .corePackageModule("TomTomSDKCommon"),
+        .corePackageModule("TomTomSDKPersonalData"),
+    ]),
+
+    Module("TomTomSDKSearchOffline", sha: "b64affba34faabee2bf63f341cb0f13e62ff5858171fd7906e97b98ee759c64f", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingOnboardSearchInternal"),
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         .offlinePackageModule("TomTomSDKSearchOfflineCommon"),
@@ -141,7 +146,7 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKDataManagement"),
     ]),
 
-    Module("TomTomSDKSearchOfflineCommon", sha: "612b414cc51c7c461cf1d63df3bd6ef06c041bd3377c1aa0e3598f84cc6acf5e", version: "0.64.0", dependencies: [
+    Module("TomTomSDKSearchOfflineCommon", sha: "78b9628dd3edac15a5f5657b76e538be52dc25e4cad1e2faf11805b14a25ef93", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingOnboardSearchInternal"),
         // core package dependencies
         .corePackageModule("TomTomSDKCommon"),
@@ -150,7 +155,7 @@ let modules: [Module] = [
         .corePackageModule("TomTomSDKPersonalData"),
     ]),
 
-    Module("TomTomSDKSearchOnlineCustomData", sha: "ca5636eddf8d75074025d91a17269892b88b018a0059fd4314660d5c29409013", version: "0.64.0", dependencies: [
+    Module("TomTomSDKSearchOnlineCustomData", sha: "7123a8aa078a55dec3fcf0917f982f2ccf90e77cc2c874f3408e640a9595669b", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingOnboardSearchInternal"),
         .offlinePackageModule("TomTomSDKSearchOfflineCommon"),
         // core package dependencies
@@ -161,19 +166,19 @@ let modules: [Module] = [
         .corePackageModule("TomTomSDKSearchCommon"),
     ]),
 
-    Module("TomTomSDKBindingOnboardSearchInternal", sha: "7164beb918e9076d224d9e613322187fd351e16f51db61ff2bb2fe10bf4ecfae", version: "0.64.0", dependencies: [
+    Module("TomTomSDKBindingOnboardSearchInternal", sha: "6bdd2bf6499bb59e16c72c369726ea4a48fc4415e92d46894d6a05cd211c14d7", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSStoreAccessInternal"),
         .offlinePackageModule("TomTomSDKBindingNDSSQLiteInternal"),
     ]),
 
-    Module("TomTomSDKBindingOnboardStructuredSearchInternal", sha: "a602feb021109f79df657a7a19c199b35803681f7dfbed894a3a6da98a177387", version: "0.64.0", dependencies: [
+    Module("TomTomSDKBindingOnboardStructuredSearchInternal", sha: "8322e876fd20381b62eecb91f97aa39a81c63c6723002ae590d356ede12fc9cc", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSStoreAccessInternal"),
         .offlinePackageModule("TomTomSDKBindingNDSSQLiteInternal"),
     ]),
 
-    Module("TomTomSDKStyleProviderOffline", sha: "4f898dd9341edd6f51c2f2b7087b5e66ac819bc7e2989b3c2080e44e45993a9e", version: "0.64.0"),
+    Module("TomTomSDKStyleProviderOffline", sha: "f7930a12ea98dc4fe2cf9710078da3fd193cf3d6c879cf907718a6dba743d532", version: "0.47.6"),
 
-    Module("TomTomSDKMapMatchingEngineOffline", sha: "c6dc40845057d15735a6d78dda9efc1a0740f36ae481495d59c1ef7600446c2e", version: "0.64.0", dependencies: [
+    Module("TomTomSDKMapMatchingEngineOffline", sha: "2775997a413c47ab919471b835b86b05d154c1c323a20005d66214d161dd83fa", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSStoreAccessInternal"),
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         // core package dependency
@@ -187,9 +192,8 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKMapMatchingEngineCommon"),
         .navigationPackageModule("TomTomSDKNavigationEngines"),
     ]),
-    Module("TomTomSDKMapMatchingEngineHybrid", sha: "a08bd94b7c70c9584b732b2f4d0666cc53f456598ead5dcce64eb50b03808001", version: "0.64.0", dependencies: [
+    Module("TomTomSDKMapMatchingEngineHybrid", sha: "52552b0a028a0f0cb26dcd2ed172ccd7188ee7bade0567f1294681070499743b", version: "0.47.6", dependencies: [
         // core package dependency
-        .corePackageModule("TomTomSDKCommon"),
         .corePackageModule("TomTomSDKFeatureToggle"),
 
         .offlinePackageModule("TomTomSDKMapMatchingEngineOffline"),
@@ -199,7 +203,7 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKNavigationEngines"),
         .navigationPackageModule("TomTomSDKMapMatchingEngineUnified"),
     ]),
-    Module("TomTomSDKRouteProjectionEngineOffline", sha: "0f518ea3e140ef0d546ffb913f5ae847e6e2899f1240bd6cb80d1447c522c7dd", version: "0.64.0", dependencies: [
+    Module("TomTomSDKRouteProjectionEngineOffline", sha: "b20b6aaae904124dca3a76d1b521c1b3e6d27e49e113c090269df7bbb1576522", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSStoreAccessInternal"),
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         // core package dependency
@@ -211,11 +215,10 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKDataManagement"),
         .navigationPackageModule("TomTomSDKRouteProjectionEngineCommon"),
     ]),
-    Module("TomTomSDKRouteProjectionEngineHybrid", sha: "161e17537ed3a2b48a818e16a33abb8d6f20c108f322a47f7d7c85cb2d1320c9", version: "0.64.0", dependencies: [
+    Module("TomTomSDKRouteProjectionEngineHybrid", sha: "0af4358de9b9e471fd3ec970ab67edd8f17f567ad7a404c9facc20972b2ee995", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKRouteProjectionEngineOffline"),
         .offlinePackageModule("TomTomSDKNavigationDataStoreHybrid"),
         // core package dependency
-        .corePackageModule("TomTomSDKCommon"),
         .corePackageModule("TomTomSDKRoute"),
         .corePackageModule("TomTomSDKFeatureToggle"),
         // navigation package dependency
@@ -226,17 +229,17 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKRouteProjectionEngineUnified"),
         .navigationPackageModule("TomTomSDKRouteProjectionEngineCommon"),
     ]),
-    Module("TomTomSDKBindingNDSSQLiteInternal", sha: "7906a2c08172ff21b70f2291f973f91f58c45ead7a23dc81b888605a9fd787d0", version: "0.64.0"),
-    Module("TomTomSDKBindingNDSStoreAccessInternal", sha: "a5b27678369bfd9dd817873388e0f13854576b06523f2fc6dcae5ac58e9c0dbe", version: "0.64.0", dependencies: [
+    Module("TomTomSDKBindingNDSSQLiteInternal", sha: "a403b10a70886b1d798a167c4c4e45583ed20e1929f1df20cc25733e549f32c4", version: "0.47.6"),
+    Module("TomTomSDKBindingNDSStoreAccessInternal", sha: "b2ea0807b606afbd99f6769db0b9e7037532de4ff5fb44434072227851a20b17", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSSQLiteInternal"),
     ]),
-    Module("TomTomSDKBindingOnboardMapUpdateInternal", sha: "e911cc128aa0df0f7fcf4f810c035efd80c9ee4abac74a51c5209f1f444b8b11", version: "0.64.0", dependencies: [
+    Module("TomTomSDKBindingOnboardMapUpdateInternal", sha: "f4b6060747f8e1c76a003a4cb6c790e98234f5c6d571be88334f4a15fd5bc019", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSSQLiteInternal"),
     ]),
-    Module("TomTomSDKBindingMapDisplayOnboardDataProviderInternal", sha: "1cb12c96a264a875f0137fb789529fd371bfa54c1c657e09e64bb90daf1fc269", version: "0.64.0", dependencies: [
+    Module("TomTomSDKBindingMapDisplayOnboardDataProviderInternal", sha: "1b6b0a073806a9217202f8e823bd172e3fd8a1af8a4f9df65dcbec4be7c317cb", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSStoreAccessInternal"),
     ]),
-    Module("TomTomSDKTrafficEngine", sha: "94e4556f31f4ac0c4af50d281b8318d7a0f2dc9f99ec8fa399e544d70042d9ab", version: "0.64.0", dependencies: [
+    Module("TomTomSDKTrafficEngine", sha: "033475e7b6a75144bfd78ddb6b92a25518f08bb724b4671fd2d20644d6e8b1be", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingTrafficInternal"),
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         // core package dependency
@@ -247,11 +250,11 @@ let modules: [Module] = [
         // navigation package dependency
         .navigationPackageModule("TomTomSDKDataManagement"),
     ]),
-    Module("TomTomSDKBindingTrafficInternal", sha: "3ce38cc8285b0b0f539eac56008ea034a087b3516bb9451c90e98ac7da169336", version: "0.64.0", dependencies: [
+    Module("TomTomSDKBindingTrafficInternal", sha: "822976a65ecc197a2b23cab45d6882359c959240464e1e922d711527f4f4e301", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSStoreAccessInternal"),
         .offlinePackageModule("TomTomSDKBindingNDSSQLiteInternal"),
     ]),
-    Module("TomTomSDKReverseGeocoderHybrid", sha: "dea9a63d19492c7b5522aeeb616507da94e7a741d9290baf2c1f38a8491a86e7", version: "0.64.0", dependencies: [
+    Module("TomTomSDKReverseGeocoderHybrid", sha: "8bc28da58f43bedf1eaeec8856ffa7392033889fbd87d5fe4c5a69ac385a38b2", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         .offlinePackageModule("TomTomSDKReverseGeocoderOffline"),
         // core package dependency
@@ -259,13 +262,13 @@ let modules: [Module] = [
         .corePackageModule("TomTomSDKReverseGeocoder"),
         .corePackageModule("TomTomSDKReverseGeocoderOnline"),
     ]),
-    Module("TomTomSDKRoutePlannerHybrid", sha: "53c76c686744887b511bfa24ce5498fd0c4f188a4695b2687d64af26449255eb", version: "0.64.0", dependencies: [
+    Module("TomTomSDKRoutePlannerHybrid", sha: "46f02a0bcfbb2de53b519ecf0d4ec1a8c10b2cd7922835632818a77fdd4b496b", version: "0.47.6", dependencies: [
         // core package dependency
         .corePackageModule("TomTomSDKCommon"),
         .corePackageModule("TomTomSDKRoute"),
         .corePackageModule("TomTomSDKRoutePlanner"),
     ]),
-    Module("TomTomSDKRouteReplannerHybrid", sha: "c34c1e49107611d46b155cbca0ced8f4bd125d735c66cb3a08ae6366ef712dc4", version: "0.64.0", dependencies: [
+    Module("TomTomSDKRouteReplannerHybrid", sha: "9a60d2c16d2fb308b8fc6f98dc5a8a0965c4c90d8e95b27cb52a3ad3b42f130a", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKRoutePlannerHybrid"),
         .offlinePackageModule("TomTomSDKRoutePlannerOffline"),
         // core package dependencies
@@ -278,15 +281,14 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKRouteReplanner"),
         .navigationPackageModule("TomTomSDKRouteReplannerInternal"),
     ]),
-    Module("TomTomSDKBindingOnboardDirectionsInternal", sha: "2554662f0bd92c4cec116e6ab3bbcb6a585f85d1f11f7f4a49723f89e716af21", version: "0.64.0", dependencies: [
+    Module("TomTomSDKBindingOnboardDirectionsInternal", sha: "12f4d0d5d93647b3a119c7be1b503f43836519f1510b26cb2c0835ada5f1ff4e", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSStoreAccessInternal"),
         .offlinePackageModule("TomTomSDKBindingNDSSQLiteInternal"),
         // core package dependencies
         .corePackageModule("TomTomSDKCommon"),
         .corePackageModule("TomTomSDKRoutingCommon"),
-        .corePackageModule("TomTomSDKRoutePlanner"),
     ]),
-    Module("TomTomSDKSearchHybrid", sha: "9cb7df6b58a4ad2cf1acb52975e14de0712edb1bfe4e63845335da4fb8fcad4c", version: "0.64.0", dependencies: [
+    Module("TomTomSDKSearchHybrid", sha: "268e4ec351afdeb3b2fcc66008d09b06d89feefacdd8d92736c456ae60c9b8d7", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         .offlinePackageModule("TomTomSDKSearchOffline"),
         .offlinePackageModule("TomTomSDKSearchOfflineCommon"),
@@ -297,10 +299,10 @@ let modules: [Module] = [
         .corePackageModule("TomTomSDKSearchCommon"),
         .corePackageModule("TomTomSDKSearchOnline"),
     ]),
-    Module("TomTomSDKStructuredSearch", sha: "ee4f51f24a456de4e92c505245d9c92656064a1cf2c0da77388e5d8cedba8b68", version: "0.64.0", dependencies: [
+    Module("TomTomSDKStructuredSearch", sha: "22a8dcdf02bc904c0e22e3b89123348ad5545f3554b71263938f20960cde8f4c", version: "0.47.6", dependencies: [
         .corePackageModule("TomTomSDKCommon"),
     ]),
-    Module("TomTomSDKStructuredSearchOffline", sha: "3a39a4484171bc9904aefa7f6c3808ad9f12289200bde71cb0cb298825b678bf", version: "0.64.0", dependencies: [
+    Module("TomTomSDKStructuredSearchOffline", sha: "7a032db40d388b346f06865c5b939ebfd6c812c9d68857b64fc5de233eeb9663", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingOnboardStructuredSearchInternal"),
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         .offlinePackageModule("TomTomSDKStructuredSearch"),
@@ -309,15 +311,15 @@ let modules: [Module] = [
         // navigation package dependency
         .navigationPackageModule("TomTomSDKDataManagement"),
     ]),
-    Module("TomTomSDKBindingOnboardOpenLRInternal", sha: "b1fa8cab0b47103af5421ccc179b6da1589123121f50389b7ca2d1883e320369", version: "0.64.0", dependencies: [
+    Module("TomTomSDKBindingOnboardOpenLRInternal", sha: "c88f3a20ffd171faf1f06d45b9b77a448fc64754dbff691d3de318b4eb9c8557", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSStoreAccessInternal"),
         .offlinePackageModule("TomTomSDKBindingNDSSQLiteInternal"),
     ]),
-    Module("TomTomSDKBindingVehicleHorizonNDSMapInternal", sha: "a1605d8477c6152f923298d3aece537439364c903538eca611db603fc832c2e6", version: "0.64.0", dependencies: [
+    Module("TomTomSDKBindingVehicleHorizonNDSMapInternal", sha: "c62a3a37b79c51b3e66f78eeb286afcc2ff6dc13c373fca57a762c7801b4d70f", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingNDSStoreAccessInternal"),
         .offlinePackageModule("TomTomSDKBindingNDSSQLiteInternal"),
     ]),
-    Module("TomTomSDKHorizonEngineOffline", sha: "21f7d242304ffdd94cc80f307cd7eac1ed9909ae9d65e9b761a3fa2497973397", version: "0.64.0", dependencies: [
+    Module("TomTomSDKHorizonEngineOffline", sha: "7606632935e09fcaf22b02d1aaab82f7d57eaebdb714dbbd45a87cb65ed98cc6", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKBindingVehicleHorizonNDSMapInternal"),
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         .offlinePackageModule("TomTomSDKBindingNDSStoreAccessInternal"),
@@ -335,7 +337,7 @@ let modules: [Module] = [
         .navigationPackageModule("TomTomSDKSafetyCameras"),
         .navigationPackageModule("TomTomSDKSafetyLocationsDataAdapterOnline"),
     ]),
-    Module("TomTomSDKHorizonEngineHybrid", sha: "ee6a61804625d7169f4617d5dfc91aa42275947cf1130ad3bcf911d31bf6c491", version: "0.64.0", dependencies: [
+    Module("TomTomSDKHorizonEngineHybrid", sha: "b60666c9669820268790a5f7cc19207b180197858a38132ef1309b672d5bf5a1", version: "0.47.6", dependencies: [
         // core package dependency
         .corePackageModule("TomTomSDKFeatureToggle"),
         .offlinePackageModule("TomTomSDKNavigationDataStoreHybrid"),
@@ -354,30 +356,27 @@ let modules: [Module] = [
         // core package dependencies
         .corePackageModule("TomTomSDKCommon"),
     ]),
-    Module("TomTomSDKNavigationOffline", sha: "745b54069e89ceabc0d166c20bfafbde09242f011a9d72abe2e0d10599d5f2d3", version: "0.64.0", dependencies: [
+    Module("TomTomSDKNavigationOffline", sha: "79fb4c35efbda617d49d6d3a749468fade8ff7173f8a66f8f92223a169be6617", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         .offlinePackageModule("TomTomSDKHorizonEngineOffline"),
         .offlinePackageModule("TomTomSDKMapMatchingEngineOffline"),
         .offlinePackageModule("TomTomSDKRouteProjectionEngineOffline"),
         // core package dependencies
-        .corePackageModule("TomTomSDKCommon"),
         .corePackageModule("TomTomSDKLocationProvider"),
         .corePackageModule("TomTomSDKVehicle"),
         .corePackageModule("TomTomSDKFeatureToggle"),
-        .corePackageModule("TomTomSDKRoutePlanner"),
         // navigation package dependency
         .navigationPackageModule("TomTomSDKNavigation"),
         .navigationPackageModule("TomTomSDKNavigationEngines"),
         .navigationPackageModule("TomTomSDKDataStoreMaintenanceEngine"),
         .navigationPackageModule("TomTomSDKRouteReplanner"),
-        .navigationPackageModule("TomTomSDKRouteReplannerDefault"),
         .navigationPackageModule("TomTomSDKHazards"),
         .navigationPackageModule("TomTomSDKSafetyCameras"),
         .navigationPackageModule("TomTomSDKHorizonEngineUnified"),
         .navigationPackageModule("TomTomSDKMapMatchingEngineUnified"),
         .navigationPackageModule("TomTomSDKRouteProjectionEngineUnified"),
     ]),
-    Module("TomTomSDKNavigationHybrid", sha: "d301d4b7d4b64b9003db53988173946f22670928298a91622b1a58de1129f78a", version: "0.64.0", dependencies: [
+    Module("TomTomSDKNavigationHybrid", sha: "7b90bb5f4f4c6f0d50e034d35f923cce08c2cedf707a9d87d668aa9b3e567428", version: "0.47.6", dependencies: [
         .offlinePackageModule("TomTomSDKDataManagementOffline"),
         .offlinePackageModule("TomTomSDKDataSourceSelectionEngine"),
         .offlinePackageModule("TomTomSDKRoutePlannerHybrid"),
@@ -388,7 +387,6 @@ let modules: [Module] = [
         .offlinePackageModule("TomTomSDKRouteReplannerHybrid"),
         .offlinePackageModule("TomTomSDKHorizonEngineHybrid"),
         // core package dependencies
-        .corePackageModule("TomTomSDKCommon"),
         .corePackageModule("TomTomSDKLocationProvider"),
         .corePackageModule("TomTomSDKVehicle"),
         .corePackageModule("TomTomSDKRoutePlanner"),
